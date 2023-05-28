@@ -1,0 +1,259 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<div class="page">
+	<div class="header">
+		{{#with header}}
+		<header class="header__content">
+			<div class="header__block">
+				<img src="/svg/apple.svg" alt="Apple" class="header__icon">
+				<nav class="header__block">
+					{{#each links}}
+					<a href="{{url}}" class="header__link">{{text}}</a>
+					{{/each}}
+				</nav>
+			</div>
+			<div class="header__block">
+				<img src="/svg/search.svg" alt="Search" class="header__icon">
+				<img src="/svg/profile.svg" alt="Profile" class="header__icon">
+			</div>
+
+		</header>
+
+
+	</div>
+	<div class="reklama">
+		<div class="header__content ">
+			{{#with ad}}
+			<div class="reklama_title">
+				{{title}}
+			</div>
+			<div class="reklama__block">
+				{{#with link}}
+
+				<a href="{{link}}" class="product__link">{{text}}</a>
+
+				{{/with}}
+			</div>
+
+			{{/with}}
+		</div>
+		{{/with}}
+
+	</div>
+	<section class="product product--big product--iphone-pro product--dark product--top">
+		{{#with iphone_pro }}
+		<div class="product__content">
+			<h1 class="product__title">{{title}}</h1>
+			<p class="product__description">
+				{{descriptions}}
+			</p>
+			<div class="product__action">
+				{{#with link}}
+				{{#each text}}
+				<a href="{{../link}}" class="product__link">{{this}}</a>
+				{{/each}}
+				{{/with}}
+
+			</div>
+		</div>
+		{{/with}}
+
+	</section>
+	<section class="product product--big product--iphone product--ligt product--top">
+		{{#with iphone }}
+		<div class="product__content">
+			<h1 class="product__title">{{title}}</h1>
+			<p class="product__description">
+				{{descriptions}}
+			</p>
+			<div class="product__action">
+				{{#with link}}
+				{{#each text}}
+				<a href="{{../link}}" class="product__link">{{this}}</a>
+				{{/each}}
+				{{/with}}
+
+			</div>
+		</div>
+		{{/with}}
+
+	</section>
+	<section class="product product--big product--watch product--dark product--top">
+		{{#with iwatch }}
+		<div class="product__content">
+			<h1 class="product__title">{{title}}</h1>
+			<p class="product__description">
+				{{descriptions}}
+			</p>
+			<div class="product__action">
+				{{#with link}}
+				{{#each text}}
+				<a href="{{../link}}" class="product__link">{{this}}</a>
+				{{/each}}
+				{{/with}}
+
+			</div>
+		</div>
+		{{/with}}
+
+	</section>
+	<div class="section__double">
+		<div>
+			<section class="product product--small product--trade product--ligt product--top">
+				{{#with trade_in}}
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">
+						{{descriptions}}
+					</p>
+					<div class="product__action">
+						{{#with link}}
+
+						<a href="{{link}}" class="product__link">{{text}}</a>
+
+						{{/with}}
+
+					</div>
+				</div>
+				{{/with}}
+
+			</section>
+		</div>
+		<div>
+			<section class="product product--small product--conference product--dark product--bottom">
+				{{#with conference}}
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">
+						{{descriptions}}
+					</p>
+					<div class="product__action">
+						{{#with link}}
+
+						<a href="{{link}}" class="product__link">{{text}}</a>
+
+						{{/with}}
+
+					</div>
+				</div>
+				{{/with}}
+
+			</section>
+		</div>
+	</div>
+	<div class="section__double">
+		<div>
+			<section class="product product--small product--ipad product--ligt product--top">
+				{{#with ipad}}
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">
+						{{descriptions}}
+					</p>
+					<div class="product__action">
+						{{#with link}}
+
+						<a href="{{link}}" class="product__link">{{text}}</a>
+
+						{{/with}}
+
+					</div>
+				</div>
+				{{/with}}
+
+			</section>
+		</div>
+		<div>
+			<section class="product product--small product--business product--dark product--top">
+				{{#with small_business}}
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">
+						{{descriptions}}
+					</p>
+					<div class="product__action">
+						{{#with link}}
+
+						<a href="{{link}}" class="product__link">{{text}}</a>
+
+						{{/with}}
+
+					</div>
+				</div>
+				{{/with}}
+
+			</section>
+		</div>
+	</div>
+	<div class="section__double">
+		<div>
+			<section class="product product--small product--gift product--ligt product--top">
+				{{#with gift}}
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">
+						{{descriptions}}
+					</p>
+					<div class="product__action">
+						{{#with link}}
+
+						<a href="{{link}}" class="product__link">{{text}}</a>
+
+						{{/with}}
+
+					</div>
+				</div>
+				{{/with}}
+
+			</section>
+		</div>
+		<div>
+			<section class="product product--small product--card product--ligt product--top">
+				{{#with card}}
+				<div class="product__content">
+					<h1 class="product__title">{{title}}</h1>
+					<p class="product__description">
+						{{descriptions}}
+					</p>
+					<div class="product__action">
+						{{#with link}}
+
+						<a href="{{link}}" class="product__link">{{text}}</a>
+
+						{{/with}}
+
+					</div>
+				</div>
+				{{/with}}
+
+			</section>
+		</div>
+	</div>
+	<div class="section__footer">
+		<div class="footer__block">
+			{{#each footer}}
+			<div class="footer__content">
+				<h2 class="footer__title">{{title}}</h2>
+				{{#each links}}
+				<div class="footer__links">
+					<a href="{{link}}" class="footer__link">{{text}}</a>
+				</div>
+
+				{{/each}}
+			</div>
+			{{/each}}
+
+		</div>
+
+	</div>
+</div>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+	Адже наш layout/default.hbs має вже структуру HTML
+	}}
